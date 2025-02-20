@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --cor-1: #00aaff;
+  --cor-2: #f0faff;
+  --cor-3: #0077cc;
+  --cor-4: #004d80; 
+  --fonte-1: "Krona One", serif;
+  --fonte-2: "Montserrat", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-1);
+  background-color: var(--cor-2);
+  color: var(--cor-1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagem de fundo */
+.bg-image-aovivo {
+  background-image: url('assets/fundo_aovivo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg-image-aovivo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.bg-image-home {
+  background-image: url("assets/fundo_home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg-image-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.bg-image-mini {
+  background-image: url("assets/fundo_mini.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg-image-mini::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.bg-image-sobre {
+  background-image: url("assets/fundo_sobre.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg-image-sobre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.bg-image-foto {
+  background-image: url("assets/fundo_foto.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg-image-foto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+/* Navbar moderna e minimalista */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagemCabeca {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+  filter: url("./assets/MIPASimbol.svg");
+  filter: invert(100%);
+}
+
+.ImagemCabeca:hover {
+  transform: scale(1.1);
+}
+
+.navmenu {
+  display: flex;
+  gap: 80px;
+  margin: 0 15px;
+}
+
+/*.navmenu__link {
+  font-family: var(--fonte-2);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-2);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navmenu__link:hover {
+  color: var(--cor-1);
+  background-color: rgba(240, 250, 255, 0.1);
+  transform: translateY(-2px);
+}*/
+/* From Uiverse.io by joe-watson-sbf */ 
+.navmenu__link {
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navmenu__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--cor-3);
+  transition: 0.5s ease;
+}
+
+.navmenu__link:hover {
+  color: var(--cor-2);
+  transition-delay: 0.5s;
+}
+
+.navmenu__link:hover::before {
+  width: 100%;
+}
+
+.navmenu__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: var(--cor-1);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.navmenu__link:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.cabeca_youtube {
+  font-family: var(--fonte-1);
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--cor-2);
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cabeca_youtube_2 {
+  font-family: var(--fonte-1);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--cor-2);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Container do YouTube */
+.youtube-frame {
+  width: 600px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  margin: 1rem auto;
+  border: 3px solid var(--cor-2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.youtube-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  
+  color: var(--cor-2);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .ImagemCabeca {
+    margin-bottom: 1rem;
+  }
+
+  .navmenu {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .navmenu__link {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    background-color: rgba(240, 250, 255, 0.05);
+  }
+
+  .cabeca_youtube {
+    font-size: 2rem;
+  }
+
+  .cabeca_youtube_2 {
+    font-size: 1.5rem;
+  }
+
+  .youtube-frame {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+  }
+}

@@ -1,0 +1,38 @@
+<!-- culto-de-hoje.html - Página Culto de Hoje da Igreja MIPA -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Culto de Hoje - Igreja MIPA</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <body class="bg-image-foto">
+      <header class="navbar">
+        <img class="ImagemCabeca" src="./assets/MIPASimbol.svg" alt="Logo Igreja MIPA">
+        <nav class="navmenu"> 
+         <span>
+           <a class="navmenu__link" href="index.html">Home</a>
+           <a class="navmenu__link" href="sobre.html">Sobre Nós</a>
+           <a class="navmenu__link" href="flickr.html">Fotos</a>
+           <a class="navmenu__link" href="ao-vivo.html" aria-current="page">Link ao Vivo</a>
+           <a class="navmenu__link" href="ministerios.html">Ministérios</a>
+         </span> 
+      </nav>  
+    </header>
+
+    <!-- Conteúdo principal com slideshow -->
+    <main class="carrossel">
+      <h1>Fotos do Culto de Hoje</h1>
+      <div id="slideshow" class="slideshow"></div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <p>&copy; 2025 Igreja MIPA - Ministério Palavra e Adoração</p>
+    </footer>
+
+    <!-- Link para o JavaScript do slideshow -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
