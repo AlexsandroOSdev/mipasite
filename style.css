@@ -24,7 +24,7 @@ body {
   flex-direction: column;
 }
 
-/* Imagem de fundo */
+/* Imagens de fundo  de todas as abas */
 .bg-image-aovivo {
   background-image: url('assets/fundo_aovivo.jpg');
   background-size: cover;
@@ -43,6 +43,7 @@ body {
   bottom: 0;
   z-index: -1;
 }
+
 .bg-image-home {
   background-image: url("assets/fundo_home.jpg");
   background-size: cover;
@@ -99,6 +100,7 @@ body {
   bottom: 0;
   z-index: -1;
 }
+
 .bg-image-foto {
   background-image: url("assets/fundo_foto.jpg");
   background-size: cover;
@@ -117,6 +119,8 @@ body {
   bottom: 0;
   z-index: -1;
 }
+/* Finalização das imagens de fundo */
+
 /* Navbar moderna e minimalista */
 .navbar {
   display: flex;
@@ -150,22 +154,6 @@ body {
   margin: 0 15px;
 }
 
-/*.navmenu__link {
-  font-family: var(--fonte-2);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--cor-2);
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.navmenu__link:hover {
-  color: var(--cor-1);
-  background-color: rgba(240, 250, 255, 0.1);
-  transform: translateY(-2px);
-}*/
 /* From Uiverse.io by joe-watson-sbf */ 
 .navmenu__link {
   font-size: 22px;
@@ -218,7 +206,6 @@ body {
   color: aliceblue;
 }
 
-
 /* Conteúdo principal */
 .content {
   flex: 1;
@@ -270,7 +257,6 @@ body {
 
 /* Footer */
 .footer {
-  
   color: var(--cor-2);
   text-align: center;
   padding: 1.5rem;
@@ -302,12 +288,15 @@ body {
 
   .ImagemCabeca {
     margin-bottom: 1rem;
+    width: 50px; /* Reduzir o tamanho da imagem */
   }
 
   .navmenu {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    justify-content: center;
+    align-items: center; /* Centralizar itens no mobile */
   }
 
   .navmenu__link {
@@ -316,6 +305,8 @@ body {
     font-size: 1.2rem;
     padding: 0.8rem;
     background-color: rgba(240, 250, 255, 0.05);
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .cabeca_youtube {
@@ -330,5 +321,58 @@ body {
     width: 100%;
     max-width: 560px;
     height: 315px;
+  }
+
+  /* Ajustes específicos para as seções 'Sobre' e 'Foto' */
+  .bg-image-sobre, .bg-image-foto {
+    background-attachment: scroll; /* Para melhorar a performance em dispositivos móveis */
+  }
+
+  /* Ajustes no layout de conteúdo */
+  .content {
+    padding: 1.5rem;
+  }
+
+  /* Ajustes de imagem nas seções */
+  .content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ajustes no layout de cada seção específica */
+  .cabeca_youtube {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .cabeca_youtube_2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Opções para telas muito pequenas (menor que 480px) */
+@media (max-width: 480px) {
+  .navmenu__link {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .cabeca_youtube {
+    font-size: 1.6rem;
+  }
+
+  .cabeca_youtube_2 {
+    font-size: 1.3rem;
+  }
+
+  .youtube-frame {
+    width: 100%;
+    height: 250px;
+  }
+
+  .navmenu__link {
+    padding: 0.8rem;
+    font-size: 1.1rem;
   }
 }
