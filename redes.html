@@ -15,40 +15,81 @@
   <body class="bg-image-mini">
     <header class="navbar">
       <img class="ImagemCabeca" src="./assets/MIPASimbol.svg" alt="Logo Igreja MIPA">
-  
+
       <!-- Botão de menu (aparece apenas em telas pequenas) -->
       <div class="menu-icon" id="menu-icon">
-          &#9776; <!-- Ícone de hambúrguer -->
+        &#9776; <!-- Ícone de hambúrguer -->
       </div>
-  
+
       <!-- Menu -->
       <nav class="navmenu" id="menu">
-          <span>
-              <a class="navmenu__link" href="index.html">Home</a>
-              <a class="navmenu__link" href="sobre.html">Sobre Nós</a>
-              <a class="navmenu__link" href="flickr.html">Fotos</a>
-              <a class="navmenu__link" href="ao-vivo.html" aria-current="page">Link ao Vivo</a>
-              <a class="navmenu__link" href="redes.html">Redes</a>
-          </span>
+        <span>
+          <a class="navmenu__link" href="index.html">Home</a>
+          <a class="navmenu__link" href="sobre.html">Sobre Nós</a>
+          <a class="navmenu__link" href="flickr.html">Fotos</a>
+          <a class="navmenu__link" href="ao-vivo.html" aria-current="page">Ao Vivo</a>
+          <a class="navmenu__link" href="redes.html">Redes</a>
+        </span>
       </nav>
-  </header>
-    <!-- Conteúdo: Botões para Ministérios -->
-    <div class="content ministerios">
-      <h1>Nossos Ministérios</h1>
-      <div class="ministry-buttons">
-        <a href="#" class="btn">MIPA Digital</a>
-        <a href="#" class="btn">Adoração</a>
-        <a href="#" class="btn">Voluntários</a>
-        <a href="#" class="btn">Consolidação</a>
-        <a href="#" class="btn">Infantil</a>
-        <a href="#" class="btn">CIA Iadah</a>
-      </div>
-    </div>
+    </header>
 
-    <footer class="footer">
-      <p>&copy; 2025 Igreja MIPA - Ministério Palavra e Adoração</p>
-    </footer>
-     <script src="script.js"></script>
+    <!-- Carrossel de Ministérios -->
+    <div class="Carrossel_slider">
+        <h1 class="carr_text">Nossas Redes</h1>
+      <div class="carrossel">
+            <input type="radio" name="slide_btn" id="slide1">
+            <input type="radio" name="slide_btn" id="slide2">
+            <input type="radio" name="slide_btn" id="slide3">
+            <input type="radio" name="slide_btn" id="slide4">
+            <input type="radio" name="slide_btn" id="slide5">
+            <div class="slide">
+              <div class="btn">MIPA Digital</a>
+              <img src="./assets/carrossel/midia.jpg" alt="midia">
+              </div>
+              <div class="slide">
+              <div class="btn">Adoração</a>
+              <img src="./assets/carrossel/adora.jpg" alt="Ministério de Adoração">
+              </div>
+              <div class="slide">
+              <div class="btn">Voluntários</a>
+              <img src="./assets/carrossel/volu.jpg" alt="Ministério de Voluntários">
+              </div>
+              <div class="slide">
+              <div class="btn">Infantil</a>
+              <img src="./assets/carrossel/kids.jpg" alt="Ministério Infantil">
+              </div>
+              <div class="slide">
+              <div class="btn">CIA Iadah</a>
+              <img src="./assets/carrossel/yada.jpg" alt="Ministério CIA Iadah">
+              </div>
+            </div> 
+      </div>
+
+
+        <div class="navigation_auto">
+          <div class="auto_btn1"></div>
+          <div class="auto_btn2"></div>
+          <div class="auto_btn3"></div>
+          <div class="auto_btn4"></div>
+          <div class="auto_btn5"></div>
+
+
+        </div>
+        <div class=manual_navigation>
+          <label for="slide1" class="manual_btn"></label>
+          <label for="slide2" class="manual_btn"></label>
+          <label for="slide3" class="manual_btn"></label>
+          <label for="slide4" class="manual_btn"></label>
+          <label for="slide5" class="manual_btn"></label>
+        </div>
+
+
+        <!-- Rodapé -->
+        <footer class="footer">
+          <p>&copy; 2025 Igreja MIPA - Ministério Palavra e Adoração. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="carrossel.js"></script> <!-- Seu arquivo de script JS -->
   </body>
-  
-  </html>
+
+</html>
