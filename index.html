@@ -1,35 +1,47 @@
 <!-- index.html - Página Home da Igreja MIPA -->
 <!DOCTYPE html>
-<html lang="pt-br"></html> <!--para usar caracteres sem dar erro-->
+<html lang="pt-br">
+
+</html> <!--para usar caracteres sem dar erro-->
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - MIPA</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body class="bg-image-home">
-    <header class="navbar">
-      <img class="ImagemCabeca" src="./assets/MIPASimbol.svg" alt="Logo Igreja MIPA">
-      <nav class="navmenu"> 
-       <span>
-         <a class="navmenu__link" href="index.html">Home</a>
-         <a class="navmenu__link" href="sobre.html">Sobre Nós</a>
-         <a class="navmenu__link" href="flickr.html">Fotos</a>
-         <a class="navmenu__link" href="ao-vivo.html" aria-current="page">Link ao Vivo</a>
-         <a class="navmenu__link" href="ministerios.html">Ministérios</a>
-       </span> 
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - MIPA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-image-home">
+  <header class="navbar">
+    <img class="ImagemCabeca" src="./assets/MIPASimbol.svg" alt="Logo Igreja MIPA">
+
+    <!-- Botão de menu (aparece apenas em telas pequenas) -->
+    <div class="menu-icon" id="menu-icon">
+        &#9776; <!-- Ícone de hambúrguer -->
+    </div>
+
+    <!-- Menu -->
+    <nav class="navmenu" id="menu">
+        <span>
+            <a class="navmenu__link" href="index.html">Home</a>
+            <a class="navmenu__link" href="sobre.html">Sobre Nós</a>
+            <a class="navmenu__link" href="flickr.html">Fotos</a>
+            <a class="navmenu__link" href="ao-vivo.html" aria-current="page">Link ao Vivo</a>
+            <a class="navmenu__link" href="redes.html">Redes</a>
+        </span>
     </nav>
-    </header>
+</header>
 
-    <main class="content">
-      <h1> <strong> MIPA </strong> - Ministério Palavra e Adoração</h1>
-      <p>Conectando pessoas através da Palavra e Adoração.</p>
-    </main>
+  <main class="content">
+    <h1> <strong> MIPA </strong> - Ministério Palavra e Adoração</h1>
+    <p>Conectando pessoas através da Palavra e Adoração.</p>
+  </main>
 
-    <footer class="footer">
-      <p>&copy; 2025 Igreja MIPA - Ministério Palavra e Adoração</p>
-    </footer>
-  </body>
+  <footer class="footer">
+    <p>&copy; 2025 Igreja MIPA - Ministério Palavra e Adoração</p>
+  </footer>
+   <script src="script.js"></script>
+</body>
+
 </html>
-

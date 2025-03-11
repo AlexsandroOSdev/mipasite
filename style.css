@@ -154,7 +154,7 @@ body {
   margin: 0 15px;
 }
 
-/* From Uiverse.io by joe-watson-sbf */ 
+
 .navmenu__link {
   font-size: 22px;
   background: transparent;
@@ -216,6 +216,8 @@ body {
   animation: fadeIn 0.8s ease-out;
   position: relative;
   z-index: 1;
+  color: var(--cor-2);
+  text-shadow: 2px 2px 4px rgba(11, 8, 59, 0.2);
 }
 
 .cabeca_youtube {
@@ -279,8 +281,18 @@ body {
   }
 }
 
+.carrossel_text {
+
+  color: var(--cor-2);
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: var(--fonte-2);
+  font-size: 2.5rem;
+  text-align: center;
+  
+}
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1116px) {
   .navbar {
     flex-direction: column;
     padding: 1rem;
@@ -351,28 +363,102 @@ body {
   }
 }
 
-/* Opções para telas muito pequenas (menor que 480px) */
-@media (max-width: 480px) {
+
+/* Responsividade para telas menores */
+/* Menu no estilo de tela pequena (menor que 768px) */
+@media (max-width: 1116px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .ImagemCabeca {
+    margin-bottom: 0;
+    width: 50px;
+  }
+
+ /* Botão de Menu (Hambúrguer) posicionado no canto superior direito */
+ .menu-icon {
+  display: block;
+  font-size: 50px;
+  color: var(--cor-2);
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  position: absolute; /* Posiciona o ícone no canto */
+  top: 1rem; /* Distância do topo */
+  right: 1rem; /* Distância da direita */
+}
+
+.menu-icon:hover {
+  transform: scale(1.5);
+}
+
+  /* Botão de Menu (Hambúrguer) posicionado no canto superior direito */
+  .menu-icon {
+    display: block;
+    font-size: 35px; /* Aumenta o tamanho do ícone */
+    color: var(--cor-2);
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+
+  .menu-icon:hover {
+    transform: scale(1.1);
+  }
+
+  /* Menu - escondido por padrão */
+  .navmenu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 999;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navmenu.show {
+    display: flex;
+  }
+
   .navmenu__link {
-    font-size: 1rem;
-    padding: 0.6rem;
-  }
-
-  .cabeca_youtube {
-    font-size: 1.6rem;
-  }
-
-  .cabeca_youtube_2 {
-    font-size: 1.3rem;
-  }
-
-  .youtube-frame {
+    font-size: 2rem; /* Aumenta o tamanho da fonte */
+    padding: 1.2rem 2rem; /* Ajuste o padding para corresponder ao novo tamanho da fonte */
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
     width: 100%;
-    height: 250px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
   }
 
-  .navmenu__link {
-    padding: 0.8rem;
-    font-size: 1.1rem;
+  .navmenu__link:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--cor-2);
+  }
+}
+ /* Oculte o menu hamburguer em telas grandes */
+ @media (min-width: 1117px) {
+  .menu-icon {
+    display: none; /* Esconde o ícone do menu quando a tela é maior que 768px */
   }
 }
